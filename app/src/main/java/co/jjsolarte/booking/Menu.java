@@ -17,4 +17,9 @@ public class Menu extends AppCompatActivity {
         Intent i = new Intent(this,AcercaDe.class);
         startActivity(i);
     }
+
+    public void onReservas(View v){
+        Intent i = new Intent(this,ContainerActivity.class);
+        startActivity(i);
+    }
 }

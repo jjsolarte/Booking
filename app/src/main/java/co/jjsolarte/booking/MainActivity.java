@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 Intent i = new Intent(MainActivity.this,Menu.class);
                 startActivity(i);
+                finish();
             }
         });
         thread.start();

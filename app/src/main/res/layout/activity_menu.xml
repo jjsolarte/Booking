@@ -28,7 +28,8 @@
                 android:text="Reservas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:theme="@style/BtnBooking"/>
+                android:theme="@style/BtnBooking"
+                android:onClick="onReservas"/>
             <Button
                 android:id="@+id/menuBtnAcerca"
                 android:onClick="onAcercaDe"
