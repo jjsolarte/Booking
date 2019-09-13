@@ -67,8 +67,16 @@ public class ContainerActivity extends AppCompatActivity {
         });
 
         frameLayout.setOnTouchListener(new OnSwipeTouch(ContainerActivity.this){
-            public void onSwipeRight(){
-                Toast.makeText(ContainerActivity.this, "Pa la derecha", Toast.LENGTH_SHORT).show();
+
+            @Override
+            public void onSwipeRight() {
+                Toast.makeText(ContainerActivity.this, "Der", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onSwipeBottom() {
+                super.onSwipeBottom();
+                Toast.makeText(ContainerActivity.this, "Abajo", Toast.LENGTH_SHORT).show();
             }
         });
     }
