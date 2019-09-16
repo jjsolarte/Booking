@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                Intent i = new Intent(MainActivity.this,Menu.class);
+                Intent i = new Intent(MainActivity.this,Login.class);
                 startActivity(i);
                 finish();
             }
