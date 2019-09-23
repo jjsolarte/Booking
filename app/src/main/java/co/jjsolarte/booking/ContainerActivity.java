@@ -13,16 +13,23 @@ import co.jjsolarte.booking.fragment.FragmentHistorial;
 import co.jjsolarte.booking.fragment.FragmentPerfil;
 import co.jjsolarte.booking.fragment.FragmentReservas;
 
-public class ContainerActivity extends AppCompatActivity {
+public class ContainerActivity extends AppCompatActivity implements FragmentReservas.ImgTouch {
 
     BottomNavigationView bottomNav;
 
     FrameLayout frameLayout;
 
+    FragmentReservas fragmentReservas;
+
+    String msj;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_container);
+
+        fragmentReservas = new FragmentReservas();
+        fragmentReservas.setImgTouch(this);
 
         bottomNav = findViewById(R.id.container_nav);
         frameLayout = findViewById(R.id.container_frame);
@@ -79,5 +86,13 @@ public class ContainerActivity extends AppCompatActivity {
                 Toast.makeText(ContainerActivity.this, "Abajo", Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    @Override
+    public void onDetalleTouch(String s) {
+        msj = s;
+        if (s!=null){
+            Toast.makeText(this, "s", Toast.LENGTH_SHORT).show();
+        }
     }
 }
