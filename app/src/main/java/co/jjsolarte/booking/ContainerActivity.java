@@ -1,13 +1,15 @@
 package co.jjsolarte.booking;
 
-import android.support.annotation.NonNull;
-import android.support.design.widget.BottomNavigationView;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import co.jjsolarte.booking.fragment.FragmentHistorial;
 import co.jjsolarte.booking.fragment.FragmentPerfil;
@@ -92,7 +94,7 @@ public class ContainerActivity extends AppCompatActivity implements FragmentRese
     public void onDetalleTouch(String s) {
         msj = s;
         if (s!=null){
-            Toast.makeText(this, "s", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Click", Toast.LENGTH_SHORT).show();
         }
     }
 }
